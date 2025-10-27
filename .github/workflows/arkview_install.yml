@@ -1,0 +1,24 @@
+name: devops arkview showcase
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      -  main
+    path-ignore:
+      - '**.md'
+      - 'docs/**'
+  pull_request:
+    branches:
+      -  main
+
+jobs:
+  install-arxview:
+    runs-on: [self-hosted, vm065-rh9-01]
+    steps:
+      - name: Install Arxview
+        run: |
+          sudo yum install -y wget
+          wget https://arxscan.com/download/arxview-installer.sh
+          chmod +x arxview-installer.sh
+          ./arxview-installer.sh
