@@ -4,13 +4,13 @@ on:
   workflow_dispatch:
   push:
     branches:
-      -  main
+      - main
     path-ignore:
       - '**.md'
       - 'docs/**'
   pull_request:
     branches:
-      -  main
+      - main
 
 jobs:
   install-arxview:
@@ -22,3 +22,4 @@ jobs:
           wget https://arxscan.com/download/arxview-installer.sh
           chmod +x arxview-installer.sh
           ./arxview-installer.sh
+``
