@@ -22,4 +22,3 @@ jobs:
           wget https://arxscan.com/download/arxview-installer.sh
           chmod +x arxview-installer.sh
           ./arxview-installer.sh
-``
